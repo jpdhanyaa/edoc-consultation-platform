@@ -83,3 +83,11 @@ export interface CareTask {
   isCompleted: boolean;
   dueDate: string;
 }
+
+export interface WebRTCSignalingMessage {
+  type: 'offer' | 'answer' | 'ice-candidate';
+  data: RTCSessionDescriptionInit | RTCIceCandidateInit;
+  from: string;
+  to: string;
+  timestamp: number;
+}
